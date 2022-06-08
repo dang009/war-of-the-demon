@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PZ2XQF8');</script>
+<!-- End Google Tag Manager -->
+
+	
+
+<meta charset="utf-8" />
+<title>生日卡片</title>
+<meta name="keywords" content="生日卡片"/>
+<meta name="description" content="生日卡片。"/>
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<embed src="song.mp3" hidden="true">
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZ2XQF8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">Dear. 陳小胖</span><br /><br />
+			<span class="comments">我的小胖胖生日快樂~</span><br />
+			<span class="comments">**2020—09-21**<br />
+			<span class="comments">是我們的第一天<br />
+			<br>
+			<span class="comments">今天也是唯一一天你大我兩歲的日子</span><br />
+			<span class="comments">認識你真的真的很開心很幸福</span><br />
+			<span class="comments">雖然我都一直欺負你</span><br />
+			<span class="comments">故意耍白目</span><br />
+			<span class="comments">但我還是很照顧你啊對吧........!!</span><br />
+			<span class="comments">我們在一起也快一年了</span><br />
+			<span class="comments">我們要繼續很多的一年喔~~</span><br />
+			<span class="comments">這可惡的疫情逼我們要網戀</span><br />
+			<span class="comments">不過我相信我們很快就可以再見面的</span><br />
+			<span class="comments">等疫情結束我要帶你一起去很多很多的地方玩</span><br />
+			<span class="comments">把暑假沒玩到的通通補回來</span><br />
+			<br>
+			<br>
+			<span class="comments"/>最後<br />
+			<span class="comments"/>我想說.............<br />
+			<br>
+			<br>
+			<span class="comments"/>親愛的~我們要一直走下去喔<br />
+			<span class="comments"/>愛你愛你愛你愛你愛你愛你愛你愛你<br/>
+			<br>
+			<span class="comments"/><span class="keyword">生 日 快 樂 ~     <br />
+		    <br>
+			<img src="photo.jpg" width="256" height="171"></a><br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					小胖~我們要繼續在一起知道嗎
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					以後的每個生日都要一起過 <br/>
+					<div class="signature">- 最帥最瘦的男友 </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		<a href="#">....</a><br />
+		<a href="#">....</a><br />
+		
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2020, 08, 20);
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+</body>
+</html>
